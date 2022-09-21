@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { StatList } from './StatList';
 export function Statistics({ title, stats }) {
   return (
     <section class="statistics">
@@ -6,10 +7,7 @@ export function Statistics({ title, stats }) {
 
       <ul class="stat-list">
         {stats.map(item => (
-          <li class="item" key={item.id}>
-            <span class="label"> {item.label}</span>
-            <span class="percentage"> {item.percentage}%</span>
-          </li>
+          <StatList stats={item} />
         ))}
       </ul>
     </section>
@@ -17,7 +15,5 @@ export function Statistics({ title, stats }) {
 }
 Statistics.propTypes = {
   title: PropTypes.string,
-  id: PropTypes.string,
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  stats: PropTypes.array.isRequired,
 };

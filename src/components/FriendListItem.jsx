@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-function FriendListItem({ avatar, name, isOnline, id }) {
+function FriendListItem({ item: { avatar, name, isOnline, id } }) {
   return (
     <li class="item" key={id}>
       <span class="status">{isOnline ? 'Online' : 'Ofline'}</span>
@@ -9,9 +9,11 @@ function FriendListItem({ avatar, name, isOnline, id }) {
   );
 }
 FriendListItem.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  id: PropTypes.number,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+  item: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+  }),
 };
 export default FriendListItem;

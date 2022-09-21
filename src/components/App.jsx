@@ -1,9 +1,11 @@
-import { Profile } from './Profile';
+import Profile from './Profile';
 import { Statistics } from './Statistics';
 import FrendList from './FriendList';
+import { TransactionHistory } from './TransactionHistory';
 import user from '../js/user.json';
 import data from '../js/data.json';
 import friends from '../js/friends.json';
+import transactions from '../js/transactions.json';
 
 export const App = () => {
   return (
@@ -18,15 +20,11 @@ export const App = () => {
     // }}
     >
       {/* React homework template */}
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
+      <Profile user={user} />
       <Statistics title="Upload stats" stats={data} />
-      <FrendList items={friends} />
+      <Statistics stats={data} />
+      <FrendList friends={friends} />
+      <TransactionHistory items={transactions} />;
     </div>
   );
 };
