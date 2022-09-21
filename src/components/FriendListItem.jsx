@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-function FriendListItem({ item: { avatar, name, isOnline, id } }) {
+function FriendListItem({ item: { avatar, name, isOnline } }) {
   return (
-    <li class="item" key={id}>
+    <>
       <span class="status">{isOnline ? 'Online' : 'Ofline'}</span>
       <img class="avatar" src={avatar} alt="User avatar" width="48" />
       <p class="name">{name}</p>
-    </li>
+    </>
   );
 }
 FriendListItem.propTypes = {

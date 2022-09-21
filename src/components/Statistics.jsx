@@ -7,7 +7,9 @@ export function Statistics({ title, stats }) {
 
       <ul class="stat-list">
         {stats.map(item => (
-          <StatList stats={item} />
+          <li class="item" key={item.id}>
+            <StatList stats={item} />
+          </li>
         ))}
       </ul>
     </section>

@@ -16,7 +16,6 @@ function Profile({
         <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
       </div>
-
       <ul class="stats">
         <li>
           <span class="label">Followers</span>

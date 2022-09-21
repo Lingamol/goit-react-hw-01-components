@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-export function StatList({ stats: { id, label, percentage } }) {
+export function StatList({ stats: { label, percentage } }) {
   return (
-    <li class="item" key={id}>
+    <>
       <span class="label">{label}</span>
       <span class="percentage"> {percentage}%</span>
-    </li>
+    </>
   );
 }
 StatList.propTypes = {
