@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 export function StatList({ stats: { label, percentage } }) {
   return (
     <>
