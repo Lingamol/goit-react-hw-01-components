@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Title, StatWrapper, List, ListItem } from './Statistics.styled';
 import { StatList } from '../StatList/StatList';
 
 function getRandomHexColor() {
@@ -7,26 +8,32 @@ function getRandomHexColor() {
 
 export function Statistics({ title, stats }) {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
+    <StatWrapper className="statistics">
+      {title && <Title className="title">{title}</Title>}
 
-      <ul class="stat-list">
+      <List className="stat-list">
         {stats.map(item => (
-          <li
-            class="item"
+          <ListItem
+            className="item"
             key={item.id}
             style={{
               backgroundColor: getRandomHexColor(),
             }}
           >
             <StatList stats={item} />
-          </li>
+          </ListItem>
         ))}
-      </ul>
-    </section>
+      </List>
+    </StatWrapper>
   );
 }
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };

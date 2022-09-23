@@ -2,9 +2,9 @@ import FriendListItem from '../FriendListItem/FriendListItem';
 
 function FriendList({ friends }) {
   return (
-    <ul class="friend-list">
+    <ul className="friend-list">
       {friends.map(item => (
-        <li class="item" key={item.id}>
+        <li className="item" key={item.id}>
           <FriendListItem item={item} />{' '}
         </li>
       ))}
