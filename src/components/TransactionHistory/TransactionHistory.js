@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Table, Thead, Tr, Th } from './TransactionHistory.styled';
+import { Table, Thead, Tr, Th, TrRow } from './TransactionHistory.styled';
 import { TransactionItem } from '../TransactionItem/TransactionItem';
 export function TransactionHistory({ items }) {
   return (
@@ -14,9 +14,9 @@ export function TransactionHistory({ items }) {
 
       <tbody>
         {items.map(item => (
-          <tr key={item.id}>
+          <TrRow key={item.id}>
             <TransactionItem item={item} />
-          </tr>
+          </TrRow>
         ))}
       </tbody>
     </Table>

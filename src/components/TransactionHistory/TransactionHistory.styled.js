@@ -21,3 +21,11 @@ export const Th = styled.th`
   border: 2px solid #8effff;
   padding: 5px;
 `;
+
+export const TrRow = styled.tr`
+  background-color: #ffffff;
+  &:nth-child(2n) {
+    background-color: #e4e4e4;
+  }
+`;
+//   border: 5px solid #8effff;
