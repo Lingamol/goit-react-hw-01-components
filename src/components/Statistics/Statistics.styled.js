@@ -16,10 +16,14 @@ export const Title = styled.h2`
 export const List = styled.ul`
   list-style-type: none;
   padding: 0;
-  display: inline-flex;
+  // margin: 0;
+  display: flex;
+  color: #ffffff;
 `;
 export const ListItem = styled.li`
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: calc((100% - 0px) / 5);
 `;

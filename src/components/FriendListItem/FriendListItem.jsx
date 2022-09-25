@@ -1,15 +1,16 @@
+import { Status, Avatar, Name } from './FriendListItem.styled';
 import PropTypes from 'prop-types';
 function FriendListItem({ item: { avatar, name, isOnline } }) {
   return (
     <>
-      <span className="status">{isOnline ? 'Online' : 'Ofline'}</span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <Status className="status"></Status>
+      <Avatar className="avatar" src={avatar} alt="User avatar" width="48" />
+      <Name className="name">{name}</Name>
     </>
   );
 }
 FriendListItem.propTypes = {
-  item: PropTypes.shape({
+  item: PropTypes.exact({
     avatar: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -17,3 +18,7 @@ FriendListItem.propTypes = {
   }),
 };
 export default FriendListItem;
+
+// {
+//   isOnline ? 'Online' : 'Ofline';
+// }

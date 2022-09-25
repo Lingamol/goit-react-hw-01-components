@@ -1,14 +1,25 @@
+import PropTypes from 'prop-types';
 import FriendListItem from '../FriendListItem/FriendListItem';
-
+import { List, Item } from './FriendList.styled';
 function FriendList({ friends }) {
   return (
-    <ul className="friend-list">
+    <List className="friend-list">
       {friends.map(item => (
-        <li className="item" key={item.id}>
+        <Item className="item" key={item.id}>
           <FriendListItem item={item} />{' '}
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }
 export default FriendList;
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      avatar: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ),
+};
