@@ -13,12 +13,7 @@ export function Statistics({ title, stats }) {
 
       <List>
         {stats.map(item => (
-          <ListItem
-            key={item.id}
-            style={{
-              backgroundColor: getRandomHexColor(),
-            }}
-          >
+          <ListItem key={item.id} bgColor={getRandomHexColor()}>
             <StatList stats={item} />
           </ListItem>
         ))}
