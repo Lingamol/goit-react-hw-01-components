@@ -14,7 +14,7 @@ export const Item = styled.li`
   display: flex;
   //   justify-content: center;
   align-items: center;
-  //   background-color: pink;
+  background-color: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   padding-right: 10px;
