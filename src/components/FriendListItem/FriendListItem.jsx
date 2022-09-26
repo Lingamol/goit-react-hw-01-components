@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function FriendListItem({ item: { avatar, name, isOnline } }) {
   return (
     <>
-      <Status className="status"></Status>
+      <Status Online={isOnline === true}></Status>
       <Avatar className="avatar" src={avatar} alt="User avatar" width="48" />
       <Name className="name">{name}</Name>
     </>

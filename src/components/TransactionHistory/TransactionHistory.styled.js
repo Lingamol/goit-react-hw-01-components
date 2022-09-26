@@ -11,14 +11,12 @@ export const Table = styled.table`
 export const Thead = styled.thead`
   background-color: #00bcd5;
   color: #ffffff;
-  //   border: 1px solid #8effff;
-  //   #ECF1F4
 `;
 export const Tr = styled.tr`
   //   border: 5px solid #8effff;
 `;
 export const Th = styled.th`
-  border: 2px solid #8effff;
+  // border: 2px solid #8effff;
   padding: 5px;
 `;
 
@@ -28,4 +26,3 @@ export const TrRow = styled.tr`
     background-color: #e4e4e4;
   }
 `;
-//   border: 5px solid #8effff;

@@ -5,8 +5,15 @@ export const Status = styled.span`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: ${item => {
-    return item.isOnline ? 'green' : 'red';
+  background: ${p => {
+    switch (p.Online) {
+      case true:
+        return '#21D100';
+      case false:
+        return '#FF0000';
+      default:
+        return '#FFA812';
+    }
   }};
 `;
 

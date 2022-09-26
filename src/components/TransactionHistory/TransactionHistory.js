@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import { Table, Thead, Tr, Th, TrRow } from './TransactionHistory.styled';
 import { TransactionItem } from '../TransactionItem/TransactionItem';
+function NameToUpperCase(text) {
+  return text.toUpperCase();
+}
 export function TransactionHistory({ items }) {
   return (
     <Table className="transaction-history">
       <Thead>
         <Tr>
-          <Th>Type</Th>
-          <Th>Amount</Th>
-          <Th>Currency</Th>
+          <Th>{NameToUpperCase('Type')}</Th>
+          <Th>{NameToUpperCase('Amount')}</Th>
+          <Th>{NameToUpperCase('Currency')}</Th>
         </Tr>
       </Thead>
 
@@ -22,4 +25,13 @@ export function TransactionHistory({ items }) {
     </Table>
   );
 }
-TransactionHistory.ptopTypes = { items: PropTypes.array.isRequired };
+TransactionHistory.ptopTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
+};

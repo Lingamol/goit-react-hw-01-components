@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
-function views1(views) {
-  return views / 1000;
-}
+
 function Profile({
   user: {
     username,
@@ -12,7 +10,6 @@ function Profile({
     stats: { followers, views, likes },
   },
 }) {
-  const v = views1(views);
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -28,7 +25,7 @@ function Profile({
         </li>
         <li className={css.statsItem}>
           <span className={css.label}>Views</span>
-          <span className={css.quantity}>{v} </span>
+          <span className={css.quantity}>{normViews(views)}</span>
         </li>
         <li className={css.statsItem}>
           <span className={css.label}>Likes</span>
@@ -52,3 +49,6 @@ Profile.propTypes = {
   }),
 };
 export default Profile;
+function normViews(views) {
+  return JSON.stringify(views / 1000).replace('.', ',');
+}
