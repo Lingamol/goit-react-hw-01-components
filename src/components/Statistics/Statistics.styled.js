@@ -25,6 +25,6 @@ export const ListItem = styled.li`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-basis: calc((100% - 0px) / 5);
+  flex-basis: calc((100% - 0px) / ${props => props.arrLength});
   background: ${props => props.bgColor};
 `;
