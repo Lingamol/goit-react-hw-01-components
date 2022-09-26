@@ -3,9 +3,9 @@ import FriendListItem from '../FriendListItem/FriendListItem';
 import { List, Item } from './FriendList.styled';
 function FriendList({ friends }) {
   return (
-    <List className="friend-list">
+    <List>
       {friends.map(item => (
-        <Item className="item" key={item.id}>
+        <Item key={item.id}>
           <FriendListItem item={item} />{' '}
         </Item>
       ))}

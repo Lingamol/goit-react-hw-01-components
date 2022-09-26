@@ -4,8 +4,8 @@ function FriendListItem({ item: { avatar, name, isOnline } }) {
   return (
     <>
       <Status Online={isOnline === true}></Status>
-      <Avatar className="avatar" src={avatar} alt="User avatar" width="48" />
-      <Name className="name">{name}</Name>
+      <Avatar src={avatar} alt="User avatar" width="48" />
+      <Name>{name}</Name>
     </>
   );
 }

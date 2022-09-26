@@ -4,8 +4,8 @@ import { Label, Percentage } from './StatList.styled';
 export function StatList({ stats: { label, percentage } }) {
   return (
     <>
-      <Label className="label">{label}</Label>
-      <Percentage className="percentage"> {percentage}%</Percentage>
+      <Label>{label}</Label>
+      <Percentage> {percentage}%</Percentage>
     </>
   );
 }

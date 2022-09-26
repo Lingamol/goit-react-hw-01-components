@@ -8,13 +8,12 @@ function getRandomHexColor() {
 
 export function Statistics({ title, stats }) {
   return (
-    <StatWrapper className="statistics">
-      {title && <Title className="title">{title}</Title>}
+    <StatWrapper>
+      {title && <Title>{title}</Title>}
 
-      <List className="stat-list">
+      <List>
         {stats.map(item => (
           <ListItem
-            className="item"
             key={item.id}
             style={{
               backgroundColor: getRandomHexColor(),

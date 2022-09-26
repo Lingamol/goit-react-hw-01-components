@@ -12,7 +12,6 @@ export const Item = styled.li`
   margin-left: auto;
   margin-bottom: 15px;
   display: flex;
-  //   justify-content: center;
   align-items: center;
   background-color: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),

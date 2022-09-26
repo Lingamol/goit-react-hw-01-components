@@ -16,7 +16,6 @@ export const Tr = styled.tr`
   //   border: 5px solid #8effff;
 `;
 export const Th = styled.th`
-  // border: 2px solid #8effff;
   padding: 5px;
 `;
 

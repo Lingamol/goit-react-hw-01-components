@@ -21,7 +21,6 @@ export const Avatar = styled.img`
   border-radius: 8px;
   margin-right: 10px;
   margin-left: 10px;
-  //
 `;
 
 export const Name = styled.p`

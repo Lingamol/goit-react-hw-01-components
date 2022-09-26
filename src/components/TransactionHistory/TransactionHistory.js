@@ -6,7 +6,7 @@ function NameToUpperCase(text) {
 }
 export function TransactionHistory({ items }) {
   return (
-    <Table className="transaction-history">
+    <Table>
       <Thead>
         <Tr>
           <Th>{NameToUpperCase('Type')}</Th>
